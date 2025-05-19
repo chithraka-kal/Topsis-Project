@@ -21,30 +21,36 @@ const TopsisRatingForm = () => {
   };
 
   return (
-    <div className="container">
-      <h2>TOPSIS Rating Tool</h2>
-      <div className="tabs">
+    <div className="topsis-container">
+      <h2 className="topsis-title">TOPSIS Rating Tool</h2>
+
+      <div className="topsis-description">
+        <h4>Select a Carbon Management Strategy</h4>
+        
+      </div>
+
+      <div className="topsis-tabs">
         <button
-          className={activeTab === 'capture' ? 'tab active' : 'tab'}
+          className={`topsis-tab ${activeTab === 'capture' ? 'active' : ''}`}
           onClick={() => setActiveTab('capture')}
         >
           Carbon Capture
         </button>
         <button
-          className={activeTab === 'separation' ? 'tab active' : 'tab'}
+          className={`topsis-tab ${activeTab === 'separation' ? 'active' : ''}`}
           onClick={() => setActiveTab('separation')}
         >
           Carbon Separation
         </button>
         <button
-          className={activeTab === 'utilization' ? 'tab active' : 'tab'}
+          className={`topsis-tab ${activeTab === 'utilization' ? 'active' : ''}`}
           onClick={() => setActiveTab('utilization')}
         >
           Carbon Utilization
         </button>
       </div>
 
-      <div className="tab-content">
+      <div className="topsis-tab-content">
         {renderActiveTab()}
       </div>
     </div>
