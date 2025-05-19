@@ -87,6 +87,15 @@ button:hover {
   transform: scale(1.03);
 }
 
+.alt-section {
+  margin-bottom: 2rem;
+}
+
+.result-section {
+  margin-top: 2rem;
+}
+
+
 /* Result section */
 .result {
   margin-top: 30px;
