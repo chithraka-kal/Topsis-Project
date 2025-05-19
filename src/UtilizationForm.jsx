@@ -58,6 +58,14 @@ const UtilizationForm = () => {
   return (
     <div className="container">
       <h2>Carbon Utilization</h2>
+        <p className='topsis-description'> 
+          Use a scale of:
+          <span> Very Good - 5</span> ,
+            <span> Good - 4</span>, 
+            <span> Average - 3</span>, 
+            <span> Poor - 2</span>,
+            <span> Very Poor-1</span>
+        </p>      
       <form onSubmit={handleSubmit}>
         <table className="ratings-table">
           <thead>
