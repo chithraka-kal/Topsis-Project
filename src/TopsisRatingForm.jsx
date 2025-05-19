@@ -28,7 +28,7 @@ const TopsisRatingForm = () => {
     const impacts = Array(criteria.length).fill('+');   // All beneficial
 
     try {
-      const response = await fetch('https://sachin84.pythonanywhere.com/', {
+      const response = await fetch('https://sachin84.pythonanywhere.com/topsis', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
