@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const UtilizationForm = () => {
+const UtilizationForm = ({ goToTab }) => {
   const alternatives = [
     { code: 'A9', name: 'Products providing permanent storage' },
     { code: 'A10', name: 'Products potentially providing long-term storage' },
@@ -22,6 +22,10 @@ const UtilizationForm = () => {
 
   const [ratings, setRatings] = useState({});
   const [result, setResult] = useState(null);
+
+  const handlePrevious = () => {
+    goToTab('separation');
+  };
 
   const handleChange = (altCode, critId, value) => {
     setRatings(prev => ({
@@ -58,14 +62,90 @@ const UtilizationForm = () => {
   return (
     <div className="container">
       <h2>Carbon Utilization</h2>
-        <p className='topsis-description'> 
-          Use a scale of:
-          <span> Very Good - 5</span> ,
-            <span> Good - 4</span>, 
-            <span> Average - 3</span>, 
-            <span> Poor - 2</span>,
-            <span> Very Poor-1</span>
-        </p>      
+      <div>
+        <h3>Products Providing Permanent Storage</h3>
+        <p>These products chemically or physically bind CO₂ in a way that ensures its sequestration for geological or
+          structural timescales. The captured CO₂ becomes part of stable mineral or composite materials, contributing
+          directly to climate change mitigation.</p>
+        <ul>
+          <li>Construction aggregates made via mineral carbonation</li>
+          <li>Carbonated concrete for infrastructure and buildings</li>
+          <li>Carbon nanomaterials (CNMs) and graphene, used in electronics and structural composites</li>
+        </ul>
+        <p>
+          Such applications are particularly relevant to Sri Lanka’s cement and construction sectors, offering synergy
+          between CO₂ capture and green material development.
+        </p>
+        <img src='src\images\Utilization\permanentStorage.png' className='image' />
+
+        <h3>Products Potentially Providing Long-Term Storage</h3>
+        <p>These products incorporate CO₂ into molecular structures that are stable over extended periods, depending on
+          usage and environmental exposure. They offer medium- to long-term carbon retention with commercial utility.</p>
+        <ul>
+          <li>Calcium carbonate, a filler and pigment in construction and paper</li>
+          <li>Melamine-formaldehyde (MF) and urea-formaldehyde (UF) resins in wood-based panels</li>
+          <li>Polycarbonate polyols, bisphenol-A polycarbonates, and polyoxymethylene, used in plastics and coatings</li>
+        </ul>
+        <p>These products strike a balance between durability and commercial integration, useful for evaluating lifecycle
+          emissions.</p>
+        <img src='src\images\Utilization\longTermStorage.png' className='image' />
+
+        <h3>Intermediates for Products</h3>
+        <p>These are chemical precursors synthesized from CO₂ that serve as feedstocks in the manufacture of various
+          end-use products. Though they may not store CO₂ indefinitely, they integrate it into extended industrial chains.</p>
+        <ul>
+          <li>Urea, crucial in agriculture and resins</li>
+          <li>Methanol and formaldehyde, key platform chemicals</li>
+          <li>Melamine, formic acid, and dimethyl carbonate, used in plastics and solvents</li>
+        </ul>
+        <p>Utilizing CO₂ as a raw material in chemical synthesis is a cornerstone of carbon circularity.</p>
+        <img src='src\images\Utilization\intermediates.png' className='image' />
+
+        <h3>Products Providing Short-Term Storage and Utilizing CO₂ in the Conventional Production Process</h3>
+        <p>These processes make use of CO₂ within existing industrial frameworks, where the captured carbon is eventually
+          released, typically through use or degradation.</p>
+        <ul>
+          <li>Urea for fertilizers, rapidly metabolized in soil</li>
+          <li>CO₂ for food and beverage carbonation, released during consumption</li>
+          <li>CO₂ for greenhouse enrichment, enhancing crop yield</li>
+          <li>Aliphatic polycarbonates with moderate durability in packaging and coatings</li>
+        </ul>
+        <p>This category supports economically feasible, immediately scalable CO₂ use, albeit with limited
+          climate impact duration.</p>
+        <img src='src\images\Utilization\utilizingCO2.png' className='image' width={500} />
+
+        <h3>Products Providing Short-Term Storage and Utilizing CO₂ in Non-Conventional Processes</h3>
+        <p>These are emerging, innovative applications that utilize CO₂ in novel chemical or material processes.
+          While storage is often temporary, these pathways expand the versatility of carbon capture technologies.</p>
+        <ul>
+          <li>Isopropanol, oxalic acid, and cellulose carbamates, with roles in pharmaceuticals and bio-composites</li>
+          <li>Dimethyl carbonate, formic acid, formaldehyde, and cyclic carbonates, explored for use in batteries,
+            solvents, and biodegradable polymers</li>
+        </ul>
+        <p>This category highlights the R&D frontier, with potential for high-value applications.</p>
+        <img src='src\images\Utilization\img.png' className='image' />
+
+        <h3>Utilization of CO₂ for Renewable Fuel Production</h3>
+        <p>This pathway converts CO₂ into energy carriers, closing the carbon loop and facilitating integration with
+          renewable energy systems. Although CO₂ is released upon combustion, these fuels offset fossil inputs and can be
+          part of net-zero strategies.</p>
+        <ul>
+          <li>Methane and hydrocarbons through catalytic or biological conversion</li>
+          <li>Dimethyl ether, ethanol, methanol, and formic acid as synthetic fuels</li>
+          <li>Biodiesel from fatty acids, enhancing biomass carbon efficiency</li>
+        </ul>
+        <p>Such uses are crucial in decarbonizing transport and supporting energy resilience in regions like Sri Lanka.</p>
+        <img src='src\images\Utilization\renewableFuelProduction.png' className='image' width={400} />
+      </div>
+
+      <p className='topsis-description'>
+        Use a scale of:
+        <span> Very Good - 5</span> ,
+        <span> Good - 4</span>,
+        <span> Average - 3</span>,
+        <span> Poor - 2</span>,
+        <span> Very Poor-1</span>
+      </p>
       <form onSubmit={handleSubmit}>
         <table className="ratings-table">
           <thead>
@@ -130,6 +210,9 @@ const UtilizationForm = () => {
               ))}
             </tbody>
           </table>
+          <div class="nav-buttons">
+            <button onClick={handlePrevious}>Previous</button>
+          </div>
         </div>
       )}
     </div>
