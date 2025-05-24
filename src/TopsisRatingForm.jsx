@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import HomePage from './HomePage';
 import CaptureForm from './CaptureForm';
 import SeparationForm from './SeparationForm';
 import UtilizationForm from './UtilizationForm';
 import './TopsisForm.css';
 
 const TopsisRatingForm = () => {
-  const [activeTab, setActiveTab] = useState('capture');
+  const [activeTab, setActiveTab] = useState('home');
 
   const renderActiveTab = () => {
     switch (activeTab) {
+      case 'home':
+        return <HomePage />;
       case 'capture':
         return <CaptureForm />;
       case 'separation':
@@ -26,10 +29,17 @@ const TopsisRatingForm = () => {
 
       <div className="topsis-description">
         <h4>Select a Carbon Management Strategy</h4>
-        
+
       </div>
 
       <div className="topsis-tabs">
+        <button
+          className={`topsis-tab ${activeTab === 'home' ? 'active' : ''}`}
+          onClick={() => setActiveTab('home')}
+        >
+          Home
+        </button>
+
         <button
           className={`topsis-tab ${activeTab === 'capture' ? 'active' : ''}`}
           onClick={() => setActiveTab('capture')}
