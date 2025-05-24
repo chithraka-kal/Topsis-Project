@@ -56,16 +56,52 @@ const CaptureForm = () => {
   return (
     <div className="container">
       <h2>Carbon Capture</h2>
-        <p className='topsis-description'> 
-          Use a scale of:
-          <span> Very Good - 5</span> ,
-            <span> Good - 4</span>, 
-            <span> Average - 3</span>, 
-            <span> Poor - 2</span>,
-            <span> Very Poor-1</span>
-        </p>
+      <div>
+        <h3>Pre-combustion capture</h3>
+        <p>Pre-combustion capture involves the removal of carbon dioxide (CO₂) from fossil fuels before the combustion process takes
+          place. In this method, fuel is first converted into a mixture of hydrogen and carbon monoxide through gasification.
+          The carbon monoxide is then reacted with steam to produce CO₂ and more hydrogen. The CO₂ is separated and captured,
+          while the hydrogen can be used as a clean fuel in power generation or industrial processes. Although commonly used in
+          integrated gasification combined cycle (IGCC) plants, the application in cement manufacturing is still limited and typically
+          more suitable for new-build facilities due to high infrastructure costs and process modifications.</p>
+        <img src='src\images\Capture\preCombustionCapture.png' alt='Pre-combustion capture' className='image' />
+
+        <h3>Post-Combustion Capture</h3>
+        <p>Post-combustion capture focuses on removing CO₂ from the exhaust gases after the combustion of fossil fuels or raw materials
+          has occurred. It is one of the most mature and commercially available technologies, typically using chemical solvents
+          such as amines to absorb CO₂ from flue gas. Its compatibility with existing cement plant infrastructure makes it a viable
+          retrofitting option for Sri Lanka's older cement production facilities. However, the energy penalty associated with solvent
+          regeneration remains a significant challenge.</p>
+        <img src='src\images\Capture\postCombustionCapture.png' alt='Post-combustion capture' className='image' />
+
+        <h3>Oxy-Fuel Combustion Capture</h3>
+        <p>Oxy-fuel combustion involves burning fuel in a mixture of pure oxygen and recycled flue gas instead of air.
+          This results in a highly concentrated CO₂ stream, which simplifies the capture process. While it offers high capture
+          efficiency and lower nitrogen oxide (NOₓ) emissions, the need for an air separation unit (ASU) and flue gas recirculation
+          system makes it capital-intensive. This approach is more applicable to new cement plants or large-scale retrofitting projects
+          and is still under development in pilot-scale studies globally.</p>
+        <img src='src\images\Capture\oxyFuelCombustionCapture.png' alt='Oxy-Fuel combustion capture' className='image' />
+
+        <h3>Industrial Separation</h3>
+        <p>Industrial separation technologies refer to standalone processes that remove CO₂ from various industrial streams,
+          independent of the combustion process. These techniques often use chemical solvents, physical sorbents, or membrane
+          technologies to extract CO₂ from flue gas or other process emissions. This approach is particularly relevant for cement
+          manufacturing, where CO₂ is emitted not only from fuel combustion but also from the calcination of limestone. Industrial
+          separation offers a modular, potentially retrofittable solution for existing plants in Sri Lanka, especially where full
+          process overhauls are impractical.</p>
+        <img src='src\images\Capture\industrialSeparation.png' alt='Industrial separation' className='image' />
+      </div>
+
+      <p className='topsis-description'>
+        Use a scale of:
+        <span> Very Good - 5</span> ,
+        <span> Good - 4</span>,
+        <span> Average - 3</span>,
+        <span> Poor - 2</span>,
+        <span> Very Poor-1</span>
+      </p>
       <form onSubmit={handleSubmit}>
-        
+
         <table className="ratings-table">
           <thead>
             <tr>
