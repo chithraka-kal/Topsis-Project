@@ -68,7 +68,7 @@ const CaptureForm = ({ goToTab }) => {
           while the hydrogen can be used as a clean fuel in power generation or industrial processes. Although commonly used in
           integrated gasification combined cycle (IGCC) plants, the application in cement manufacturing is still limited and typically
           more suitable for new-build facilities due to high infrastructure costs and process modifications.</p>
-        <img src='src\images\Capture\preCombustionCapture.png' alt='Pre-combustion capture' className='image' />
+        <img src='./images/Capture/preCombustionCapture.png' alt='Pre-combustion capture' className='image' />
 
         <h3>Post-Combustion Capture</h3>
         <p>Post-combustion capture focuses on removing CO₂ from the exhaust gases after the combustion of fossil fuels or raw materials
@@ -76,7 +76,7 @@ const CaptureForm = ({ goToTab }) => {
           such as amines to absorb CO₂ from flue gas. Its compatibility with existing cement plant infrastructure makes it a viable
           retrofitting option for Sri Lanka's older cement production facilities. However, the energy penalty associated with solvent
           regeneration remains a significant challenge.</p>
-        <img src='src\images\Capture\postCombustionCapture.png' alt='Post-combustion capture' className='image' />
+        <img src='.\images\Capture\postCombustionCapture.png' alt='Post-combustion capture' className='image' />
 
         <h3>Oxy-Fuel Combustion Capture</h3>
         <p>Oxy-fuel combustion involves burning fuel in a mixture of pure oxygen and recycled flue gas instead of air.
@@ -84,7 +84,7 @@ const CaptureForm = ({ goToTab }) => {
           efficiency and lower nitrogen oxide (NOₓ) emissions, the need for an air separation unit (ASU) and flue gas recirculation
           system makes it capital-intensive. This approach is more applicable to new cement plants or large-scale retrofitting projects
           and is still under development in pilot-scale studies globally.</p>
-        <img src='src\images\Capture\oxyFuelCombustionCapture.png' alt='Oxy-Fuel combustion capture' className='image' />
+        <img src='.\images\Capture\oxyFuelCombustionCapture.png' alt='Oxy-Fuel combustion capture' className='image' />
 
         <h3>Industrial Separation</h3>
         <p>Industrial separation technologies refer to standalone processes that remove CO₂ from various industrial streams,
@@ -93,7 +93,7 @@ const CaptureForm = ({ goToTab }) => {
           manufacturing, where CO₂ is emitted not only from fuel combustion but also from the calcination of limestone. Industrial
           separation offers a modular, potentially retrofittable solution for existing plants in Sri Lanka, especially where full
           process overhauls are impractical.</p>
-        <img src='src\images\Capture\industrialSeparation.png' alt='Industrial separation' className='image' />
+        <img src='.\images\Capture\industrialSeparation.png' alt='Industrial separation' className='image' />
       </div>
 
       <p className='topsis-description'>
