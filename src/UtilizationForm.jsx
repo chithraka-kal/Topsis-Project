@@ -76,7 +76,7 @@ const UtilizationForm = ({ goToTab }) => {
           Such applications are particularly relevant to Sri Lanka’s cement and construction sectors, offering synergy
           between CO₂ capture and green material development.
         </p>
-        <img src='src\images\Utilization\permanentStorage.png' className='image' />
+        <img src='.\images\Utilization\permanentStorage.png' className='image' />
 
         <h3>Products Potentially Providing Long-Term Storage</h3>
         <p>These products incorporate CO₂ into molecular structures that are stable over extended periods, depending on
@@ -88,7 +88,7 @@ const UtilizationForm = ({ goToTab }) => {
         </ul>
         <p>These products strike a balance between durability and commercial integration, useful for evaluating lifecycle
           emissions.</p>
-        <img src='src\images\Utilization\longTermStorage.png' className='image' />
+        <img src='.\images\Utilization\longTermStorage.png' className='image' />
 
         <h3>Intermediates for Products</h3>
         <p>These are chemical precursors synthesized from CO₂ that serve as feedstocks in the manufacture of various
@@ -99,7 +99,7 @@ const UtilizationForm = ({ goToTab }) => {
           <li>Melamine, formic acid, and dimethyl carbonate, used in plastics and solvents</li>
         </ul>
         <p>Utilizing CO₂ as a raw material in chemical synthesis is a cornerstone of carbon circularity.</p>
-        <img src='src\images\Utilization\intermediates.png' className='image' />
+        <img src='.\images\Utilization\intermediates.png' className='image' />
 
         <h3>Products Providing Short-Term Storage and Utilizing CO₂ in the Conventional Production Process</h3>
         <p>These processes make use of CO₂ within existing industrial frameworks, where the captured carbon is eventually
@@ -112,7 +112,7 @@ const UtilizationForm = ({ goToTab }) => {
         </ul>
         <p>This category supports economically feasible, immediately scalable CO₂ use, albeit with limited
           climate impact duration.</p>
-        <img src='src\images\Utilization\utilizingCO2.png' className='image' width={500} />
+        <img src='.\images\Utilization\utilizingCO2.png' className='image' width={500} />
 
         <h3>Products Providing Short-Term Storage and Utilizing CO₂ in Non-Conventional Processes</h3>
         <p>These are emerging, innovative applications that utilize CO₂ in novel chemical or material processes.
@@ -123,7 +123,7 @@ const UtilizationForm = ({ goToTab }) => {
             solvents, and biodegradable polymers</li>
         </ul>
         <p>This category highlights the R&D frontier, with potential for high-value applications.</p>
-        <img src='src\images\Utilization\img.png' className='image' />
+        <img src='.\images\Utilization\img.png' className='image' />
 
         <h3>Utilization of CO₂ for Renewable Fuel Production</h3>
         <p>This pathway converts CO₂ into energy carriers, closing the carbon loop and facilitating integration with
@@ -135,7 +135,7 @@ const UtilizationForm = ({ goToTab }) => {
           <li>Biodiesel from fatty acids, enhancing biomass carbon efficiency</li>
         </ul>
         <p>Such uses are crucial in decarbonizing transport and supporting energy resilience in regions like Sri Lanka.</p>
-        <img src='src\images\Utilization\renewableFuelProduction.png' className='image' width={400} />
+        <img src='.\images\Utilization\renewableFuelProduction.png' className='image' width={400} />
       </div>
 
       <p className='topsis-description'>
