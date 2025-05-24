@@ -266,5 +266,12 @@ button:hover {
   background-color: #e0f7e9;
 }
 
-/* Responsive */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
 
+.only-next {
+  margin-left: auto;
+}

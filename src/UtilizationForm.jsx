@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const UtilizationForm = () => {
+const UtilizationForm = ({ goToTab }) => {
   const alternatives = [
     { code: 'A9', name: 'Products providing permanent storage' },
     { code: 'A10', name: 'Products potentially providing long-term storage' },
@@ -22,6 +22,10 @@ const UtilizationForm = () => {
 
   const [ratings, setRatings] = useState({});
   const [result, setResult] = useState(null);
+
+  const handlePrevious = () => {
+    goToTab('separation');
+  };
 
   const handleChange = (altCode, critId, value) => {
     setRatings(prev => ({
@@ -108,22 +112,22 @@ const UtilizationForm = () => {
         </ul>
         <p>This category supports economically feasible, immediately scalable CO₂ use, albeit with limited
           climate impact duration.</p>
-        <img src='src\images\Utilization\utilizingCO2.png' className='image' width={500}/>
+        <img src='src\images\Utilization\utilizingCO2.png' className='image' width={500} />
 
         <h3>Products Providing Short-Term Storage and Utilizing CO₂ in Non-Conventional Processes</h3>
-        <p>These are emerging, innovative applications that utilize CO₂ in novel chemical or material processes. 
+        <p>These are emerging, innovative applications that utilize CO₂ in novel chemical or material processes.
           While storage is often temporary, these pathways expand the versatility of carbon capture technologies.</p>
         <ul>
           <li>Isopropanol, oxalic acid, and cellulose carbamates, with roles in pharmaceuticals and bio-composites</li>
-          <li>Dimethyl carbonate, formic acid, formaldehyde, and cyclic carbonates, explored for use in batteries, 
+          <li>Dimethyl carbonate, formic acid, formaldehyde, and cyclic carbonates, explored for use in batteries,
             solvents, and biodegradable polymers</li>
         </ul>
         <p>This category highlights the R&D frontier, with potential for high-value applications.</p>
-        <img src='src\images\Utilization\img.png' className='image'/>
+        <img src='src\images\Utilization\img.png' className='image' />
 
         <h3>Utilization of CO₂ for Renewable Fuel Production</h3>
-        <p>This pathway converts CO₂ into energy carriers, closing the carbon loop and facilitating integration with 
-          renewable energy systems. Although CO₂ is released upon combustion, these fuels offset fossil inputs and can be 
+        <p>This pathway converts CO₂ into energy carriers, closing the carbon loop and facilitating integration with
+          renewable energy systems. Although CO₂ is released upon combustion, these fuels offset fossil inputs and can be
           part of net-zero strategies.</p>
         <ul>
           <li>Methane and hydrocarbons through catalytic or biological conversion</li>
@@ -131,7 +135,7 @@ const UtilizationForm = () => {
           <li>Biodiesel from fatty acids, enhancing biomass carbon efficiency</li>
         </ul>
         <p>Such uses are crucial in decarbonizing transport and supporting energy resilience in regions like Sri Lanka.</p>
-        <img src='src\images\Utilization\renewableFuelProduction.png' className='image' width={400}/>
+        <img src='src\images\Utilization\renewableFuelProduction.png' className='image' width={400} />
       </div>
 
       <p className='topsis-description'>
@@ -206,6 +210,9 @@ const UtilizationForm = () => {
               ))}
             </tbody>
           </table>
+          <div class="nav-buttons">
+            <button onClick={handlePrevious}>Previous</button>
+          </div>
         </div>
       )}
     </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const SeparationForm = () => {
+const SeparationForm = ({ goToTab }) => {
   const alternatives = [
     { code: 'A5', name: 'Solvents (Absorption)' },
     { code: 'A6', name: 'Membranes' },
@@ -19,6 +19,14 @@ const SeparationForm = () => {
 
   const [ratings, setRatings] = useState({});
   const [result, setResult] = useState(null);
+
+  const handlePrevious = () => {
+    goToTab('capture');
+  };
+
+  const handleNext = () => {
+    goToTab('utilization');
+  };
 
   const handleChange = (altCode, critId, value) => {
     setRatings(prev => ({
@@ -74,18 +82,18 @@ const SeparationForm = () => {
         <img src='src\images\Separation\membranes.png' alt='Membranes' className='image' />
 
         <h3>Solid Sorbents</h3>
-        <p>Solid sorbents capture CO₂ through physical or chemical binding on porous solid materials such as zeolites, 
-          activated carbon, or metal-organic frameworks (MOFs). These materials can be regenerated through pressure or 
-          temperature swings, making the process cyclic and potentially energy-efficient. Solid sorbents offer promising 
-          low-cost alternatives to solvents, especially in modular or small-scale applications, though their industrial 
+        <p>Solid sorbents capture CO₂ through physical or chemical binding on porous solid materials such as zeolites,
+          activated carbon, or metal-organic frameworks (MOFs). These materials can be regenerated through pressure or
+          temperature swings, making the process cyclic and potentially energy-efficient. Solid sorbents offer promising
+          low-cost alternatives to solvents, especially in modular or small-scale applications, though their industrial
           deployment in cement manufacturing is still under research and development.</p>
         <img src='src\images\Separation\solidSorbents.png' alt='Solid Sorbents' className='image' width={400} />
 
         <h3>Cryogenic Separation</h3>
-        <p>Cryogenic separation involves cooling gas mixtures to very low temperatures to liquefy or solidify 
-          CO₂ for removal. This technique yields high-purity CO₂ and is best suited for gas streams with high 
-          CO₂ concentrations. While it is less common in cement production due to high energy consumption, it 
-          holds potential in niche applications or when integrated with other technologies to improve overall 
+        <p>Cryogenic separation involves cooling gas mixtures to very low temperatures to liquefy or solidify
+          CO₂ for removal. This technique yields high-purity CO₂ and is best suited for gas streams with high
+          CO₂ concentrations. While it is less common in cement production due to high energy consumption, it
+          holds potential in niche applications or when integrated with other technologies to improve overall
           system efficiency.</p>
         <img src='src\images\Separation\cryogenicSeparation.jpg' alt='Cryogenic Separation' className='image' />
       </div>
@@ -162,6 +170,12 @@ const SeparationForm = () => {
               ))}
             </tbody>
           </table>
+
+          <div class="nav-buttons">
+            <button onClick={handlePrevious}>Previous</button>
+            <button onClick={handleNext}>Next</button>
+          </div>
+
         </div>
       )}
     </div>

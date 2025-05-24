@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import HomePage from './HomePage';
 import CaptureForm from './CaptureForm';
 import SeparationForm from './SeparationForm';
@@ -8,16 +8,22 @@ import './TopsisForm.css';
 const TopsisRatingForm = () => {
   const [activeTab, setActiveTab] = useState('home');
 
+  const goToTab = (tabName) => setActiveTab(tabName);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [activeTab]);
+
   const renderActiveTab = () => {
     switch (activeTab) {
       case 'home':
         return <HomePage />;
       case 'capture':
-        return <CaptureForm />;
+        return <CaptureForm goToTab={goToTab} />;
       case 'separation':
-        return <SeparationForm />;
+        return <SeparationForm goToTab={goToTab}/>;
       case 'utilization':
-        return <UtilizationForm />;
+        return <UtilizationForm goToTab={goToTab}/>;
       default:
         return null;
     }
@@ -25,7 +31,7 @@ const TopsisRatingForm = () => {
 
   return (
     <div className="topsis-container">
-      <h2 className="topsis-title">TOPSIS Rating Tool</h2>
+      <h2 className="topsis-title">CCUS TOPSIS Rating Tool</h2>
 
       <div className="topsis-description">
         <h4>Select a Carbon Management Strategy</h4>

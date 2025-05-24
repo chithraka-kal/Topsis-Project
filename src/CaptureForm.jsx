@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CaptureForm = () => {
+const CaptureForm = ({ goToTab }) => {
   const alternatives = [
     { code: 'A1', name: 'Pre Combustion' },
     { code: 'A2', name: 'Post Combustion' },
@@ -20,6 +20,10 @@ const CaptureForm = () => {
 
   const [ratings, setRatings] = useState({});
   const [result, setResult] = useState(null);
+
+  const handleNext = () => {
+    goToTab('separation');
+  };
 
   const handleChange = (altCode, critId, value) => {
     setRatings(prev => ({
@@ -165,6 +169,9 @@ const CaptureForm = () => {
               ))}
             </tbody>
           </table>
+          <div class="nav-buttons">
+            <button class="only-next" onClick={handleNext}>Next</button>
+          </div>
         </div>
       )}
     </div>
