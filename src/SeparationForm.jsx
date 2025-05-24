@@ -71,7 +71,7 @@ const SeparationForm = ({ goToTab }) => {
           mature technology and is widely adopted due to its high capture efficiency. However, it has high energy demands
           and potential solvent degradation issues, which can impact long-term sustainability in cement production
           contexts.</p>
-        <img src='src\images\Separation\solvents.png' alt='Solvents' className='image' />
+        <img src='.\images\Separation\solvents.png' alt='Solvents' className='image' />
 
         <h3>Membranes</h3>
         <p>Membrane separation relies on selectively permeable materials that allow CO₂ to pass through while blocking
@@ -79,7 +79,7 @@ const SeparationForm = ({ goToTab }) => {
           gas treatment setups with minimal space requirements. Membranes are compact, scalable, and energy-efficient
           but often face challenges in selectivity and durability, especially under the high-temperature, dusty
           conditions common in cement plants.</p>
-        <img src='src\images\Separation\membranes.png' alt='Membranes' className='image' />
+        <img src='.\images\Separation\membranes.png' alt='Membranes' className='image' />
 
         <h3>Solid Sorbents</h3>
         <p>Solid sorbents capture CO₂ through physical or chemical binding on porous solid materials such as zeolites,
@@ -87,7 +87,7 @@ const SeparationForm = ({ goToTab }) => {
           temperature swings, making the process cyclic and potentially energy-efficient. Solid sorbents offer promising
           low-cost alternatives to solvents, especially in modular or small-scale applications, though their industrial
           deployment in cement manufacturing is still under research and development.</p>
-        <img src='src\images\Separation\solidSorbents.png' alt='Solid Sorbents' className='image' width={400} />
+        <img src='.\images\Separation\solidSorbents.png' alt='Solid Sorbents' className='image' width={400} />
 
         <h3>Cryogenic Separation</h3>
         <p>Cryogenic separation involves cooling gas mixtures to very low temperatures to liquefy or solidify
@@ -95,7 +95,7 @@ const SeparationForm = ({ goToTab }) => {
           CO₂ concentrations. While it is less common in cement production due to high energy consumption, it
           holds potential in niche applications or when integrated with other technologies to improve overall
           system efficiency.</p>
-        <img src='src\images\Separation\cryogenicSeparation.jpg' alt='Cryogenic Separation' className='image' />
+        <img src='.\images\Separation\cryogenicSeparation.jpg' alt='Cryogenic Separation' className='image' />
       </div>
 
       <p className='topsis-description'>
